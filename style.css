@@ -1,15 +1,23 @@
 /*menu*/
 
-.hidden {
-    /*    display: none;*/
-    /*    transform: scale(0);*/
-    transform: translateX(100%);
-    opacity: 0;
+* {
+    box-sizing: border-box
 }
 
+body {
+   background-image: url(billeder/bagrung.png);
+}
+
+img {
+    width: 100%
+}
+
+.hidden {}
+
 #menuknap {
-    display: inline-block;
+    display: none;
     font-size: 2.5em;
+
 }
 
 
@@ -49,30 +57,11 @@ a:hover {
     transition: transform .3s;
 }
 
-@media only screen and (min-width: 600px) {
 
-    #menuknap {
-        display: none;
-    }
-
-    .hidden {
-        transform: translateX(0);
-        opacity: 1;
-    }
-
-    #menu a {
-        display: inline-block;
-        /* This makes the menu horisontal */
-
-    }
-
-
-}
 
 /*menuslut*/
 /*splash*/
 #splash {
-
     width: 99vw;
     height: 100vh;
     background-image: url(billeder/Artboard%201.jpg);
@@ -80,9 +69,33 @@ a:hover {
     background-position: 5%;
     max-width: none;
 }
+/*splashslut*/
+
+#port .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15vw;
+}
+
+
+
+
+#port .box {
+    padding: 50px;
+    margin: 30px;
+    text-align: center;
+    box-sizing: content-box;
+    flex-basis: 400px;
+    flex-grow: 2;
+    background-color: #FEBBC5;
+    width: 15%;
+    height: 20%;
+
+}
 
 /*splashslu*/
 /*om*/
+/*
 #bagrund_port {
     width: 99vw;
     height: 100vh;
@@ -195,48 +208,34 @@ a:hover {
     display: flex;
     flex-wrap: wrap;
 }
+*/
 
-#om_bagrund {
-    width: 99vw;
-    height: 100vh;
-    background-image: url(billeder/Artboard%202.jpg);
-    background-size: cover;
-    background-position: 5%;
-    max-width: none;
+
+
+#om .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10vw;
+
 }
 
-
-.txt {
-    top: 10vw;
-    left: 55vw;
-    padding: 26px;
-    text-align: center;
-    width: 25%;
-    height: 54%;
-    position: absolute;
+#om .col {
+    flex-grow: 2;
+    flex-basis: 100px;
     background-color: #FEBBC5;
-}
+    padding: 1.5rem;
+    margin: 2vw;
 
-.bil img {
-    top: 10vw;
-    left: 15vw;
-    padding: 26px;
-    text-align: center;
-    position: absolute;
-    height: 400px;
-    width: 350px;
-    background-color: #FEBBC5;
 
 
 }
 
-#web_bagrund {
-    width: 99vw;
-    height: 100vh;
-    background-image: url(billeder/Artboard%202.jpg);
-    background-size: cover;
-    background-position: 5%;
-    max-width: none;
+#om .col img {
+    flex-grow: 2;
+    flex-basis: 100px;
+    padding: 1.5rem;
+    width: 300px;
+    height: 300px:
 }
 
 #box.lille {
@@ -244,7 +243,7 @@ a:hover {
     max-height: 150px;
     transition: max-height 0.5s ease-out;
     position: absolute;
-    top: 16vw;
+    top: 20vw;
     left: 25vw;
     width: 50%;
     background-color: #FEBBC5;
@@ -255,7 +254,7 @@ a:hover {
     max-height: 3000px;
     transition: max-height 1s ease-out;
     position: absolute;
-    top: 16vw;
+    top: 20vw;
     left: 25vw;
     background-color: #FEBBC5;
     width: 50%;
@@ -291,11 +290,52 @@ a:hover {
 
 }
 
-#overskrift_web {
+#overskrift_web h1 {
     text-align: center;
     position: absolute;
     top: 3vw;
     left: 40vw;
-    font-size: 1.7rem;
+    font-size: 3rem;
 
+}
+
+#overskrift_web p {
+    text-align: center;
+    position: absolute;
+    top: 9vw;
+    left: 25vw;
+    width: 600px;
+    font-size: 1rem;
+
+}
+
+#box.stor img {
+    top: 10vw;
+    left: 25vw;
+    padding: 26px;
+    text-align: center;
+    height: 300px;
+    width: 400px;
+    background-color: #FEBBC5
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    #menuknap {
+        display: inline-block;
+    }
+
+    .hidden {
+        display: none;
+
+
+    }
+
+    #menu a {
+        display: inline-block;
+
+        /* This makes the menu horisontal */
+
+    }
 }
